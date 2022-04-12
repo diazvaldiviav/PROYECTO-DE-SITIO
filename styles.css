@@ -1,0 +1,824 @@
+:root{
+  /*colores principales*/
+  --color-backgroun-body: #00640033;
+  --colo-btn-nav: #ffff;
+  --color-hover-a: #adff2f;
+
+  /*colores de textos*/
+  --color-texto-primario : #000;
+
+  /*tamanos de fuentes*/
+  --font-primary-body: 16px;
+
+}
+
+
+
+/* Global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  /* Pattern from https://www.heropatterns.com/ */
+  background-color: var(--color-backgroun-body);
+  color: var(--color-texto-primario);
+  font-size: var(--font-primary-body);
+}
+
+.header {
+  background-color: #fff;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+.nav-link {
+  color: #000;
+  text-decoration: none;
+}
+
+.logo {
+  width: 100px;
+}
+
+.nombre-logo{
+  position: absolute;
+  left: 240px;
+  top: 40px;
+  color: green;
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-family: Brush Script MT;
+}
+
+.nav-menu {
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
+}
+
+.nav-menu-item {
+  font-size: 18px;
+  margin: 0 10px;
+  line-height: 80px;
+  text-transform: uppercase;
+  width: max-content;
+}
+
+.nav-menu-link {
+  padding: 8px 12px;
+  border-radius: 3px;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link_active {
+  background-color: var(--color-hover-a);
+  transition: 0.5s;
+}
+
+/* TOGGLE */
+.nav-toggle {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 20px;
+  line-height: 60px;
+  cursor: pointer;
+
+  display: none;
+}
+
+
+
+
+hr {
+  margin: 10px 0;
+}
+
+
+
+/* header */
+
+
+.banner {
+  margin-top: 80px;
+  width: 100%;
+  height: 600px;
+  animation: banner 10s infinite linear alternate;
+  background-size: 100% 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+@keyframes banner{
+  0%, 20%{
+      background-image: url(./img/img1.jpg);
+  }
+
+  25%, 45%{
+      background-image: url(./img/img2.jpg);
+  }
+
+  50%, 70%{
+      background-image: url(./img/img3.jpg);
+  }
+
+  75%, 100%{
+      background-image: url(./img/img4.jpg);
+  }
+}
+
+
+.capa{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.info{
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  max-width: 550px;
+}
+
+.info h1{
+  color: #fff;
+  font-size: 45px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+
+   
+}
+
+.info p{
+  color: #c7c7c7;
+  line-height: 1.7;
+  margin-bottom: 30px;
+
+}
+
+.info a{
+  color: #fff;
+  text-decoration: none;
+  background-color: #3088e0;
+  padding: 16px 37px;
+  display: inline-block;
+  border-radius: 50px;
+}
+
+.info a:hover{
+ background-color: #3088e080;
+}
+
+
+/*about*/
+
+.about{
+  margin-left: 10%;
+  color: #091726;
+  height: 70vh;
+  padding-top: 50px;
+  margin-bottom: 20px;
+}
+
+
+
+.container{
+  display: flex;
+}
+
+
+.about p{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.about-left{
+  width: 50%;
+}
+
+.about-left .large{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.about-left h4{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+.about-right{
+  width: 50%;
+}
+
+.about-right img{
+  margin-left: 60px;
+  border-radius: 50px;
+  width: 400px;
+}
+/*Garantias*/
+
+.title-garantia{
+  text-align: center;
+  font-size: 40px;
+  color: #6a6a6a;
+  margin-top: 100px;
+  font-weight: 100;
+}
+
+.garantia-container{
+  font-family: sans-serif;
+  letter-spacing: 0.03;
+  line-height: 1.6;
+  width: 100%;
+  max-width: 1200px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+} 
+
+.garantia-container .ico{
+  width: 200px;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  
+}
+
+.garantia-container .ico img{
+  width: 150px;
+  height: 100px;
+}
+
+.garantia-container .ico h4{
+  font-weight: 600; 
+ }
+
+
+ .garantia-container .ico p{
+  padding: 0;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/*Servicios*/
+
+.nosotros-banner-title{
+  display: none;
+}
+
+.nosotros-banner{
+  display: none;
+}
+
+.title{
+  text-align: center;
+  font-size: 40px;
+  color: #6a6a6a;
+  margin-top: 100px;
+  font-weight: 100;
+}
+
+
+.serv-container{
+  font-family: sans-serif;
+  letter-spacing: 0.03;
+  line-height: 1.6;
+  width: 100%;
+  max-width: 1200px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+} 
+
+
+.serv-container .card{
+  overflow: hidden;
+  width: 330px;
+  height: 430px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.serv-container .card:hover{
+  transform: translate(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.serv-container .card img{
+  width: 330px;
+  height: 220px;
+}
+
+
+.serv-container .card h4{
+ font-weight: 600; 
+}
+
+.serv-container .card p{
+  padding: 0;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+
+.serv-container .card a{
+  font-weight: 500;
+  text-decoration: none;
+  color: #3498db;
+}
+
+
+
+
+
+
+
+/* footer */
+.footer-links {
+  background: #2f3640;
+  color: #616161;
+  font-size: 12px;
+  padding: 35px 0;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
+
+
+.footer-container ul {
+  margin: 0 auto;
+}
+
+.footer-links li {
+  line-height: 2.8;
+}
+
+.footer {
+  background: #2f3640;
+  color: #616161;
+  font-size: 12px;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 1rem;
+  padding-bottom: 20px;
+}
+
+.redes{
+  margin: 50px;
+  position: relative;
+  display: flex;
+}
+
+.redes p{
+  color: #616161;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+  position: absolute;
+  left: 70px;
+  bottom: 80px;
+}
+
+.links {
+  
+  left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.links a {
+  margin: 0 30px;
+}
+
+.links a {
+  font-size: 3rem;
+}
+
+
+.links a img{
+  width: 50px;
+}
+
+
+/* MOBILE */
+@media (max-width: 850px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .header {
+    height: 80px;
+  }
+
+  .logo {
+    margin-top: 5px;
+    width: 90px;
+  }
+
+  .nombre-logo{
+    display: none;
+  }
+
+  .nav-menu {
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: #2c3e50;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    padding: 20px 0;
+
+    height: calc(100% - 60px);
+    overflow-y: auto;
+
+    left: 100%;
+    transition: left 0.3s;
+  }
+  .nav-link{
+    color: #fff;
+  }
+
+  .nav-menu-item {
+    line-height: 70px;
+  }
+
+  .nav-menu-link:hover,
+  .nav-menu-link_active {
+    background: none;
+    color: var(--color-hover-a);
+  }
+
+  .nav-toggle {
+    margin-top: 20px;
+    display: block;
+  }
+
+  .nav-menu_visible {
+    left: 0;
+  }
+
+  .nav-toggle:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  .banner{
+    display: none;
+  }
+
+  .capa{
+    display: none;
+  }
+
+  /*Por que contactarnos*/
+
+  .container{
+    flex-direction: column;
+  }
+
+
+  .about p{
+    font-size: 15px;
+  }
+  
+  .about-left{
+    width: 100%;
+  }
+
+  .about-right{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-right img{
+    margin-right: 20px;
+    border-radius: 5%;
+    width: 100%;
+    height: 200px;
+  }
+
+
+  /*Garantias*/
+
+.title-garantia{
+  text-align: center;
+  font-size: 30px;
+  color: #6a6a6a;
+  margin-top: 100px;
+  font-weight: 100;
+}
+
+
+
+.garantia-container .ico{
+  justify-items: center;
+  width: 100px;
+  height: 300px;
+  border-radius: 20px;
+  margin: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+
+.garantia-container .ico img{
+  width: 90px;
+  height: 80px;
+}
+
+.garantia-container .ico h4{
+  font-weight: 600; 
+ }
+
+
+ .garantia-container .ico p{
+  padding: 0;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+/*Servicios
+
+.title, .serv-container{
+  display: none;
+}*/
+.nosotros-banner-title, .nosotros-banner{
+  display: none;
+}
+/*Servicios responsive*/
+.nosotros-banner{
+  display: none;
+}
+
+.title{
+  text-align: center;
+  font-size: 30px;
+  color: #6a6a6a;
+  margin-top: 50px;
+  font-weight: 100;
+}
+
+
+.serv-container{
+  font-family: sans-serif;
+  letter-spacing: 0.03;
+  line-height: 1.6;
+  width: 100%;
+  max-width: 850px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+} 
+
+
+.serv-container .card{
+  overflow: hidden;
+  width: 200px;
+  height: 350px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.serv-container .card:hover{
+  transform: translate(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.serv-container .card img{
+  width: 330px;
+  height: 220px;
+}
+
+
+.serv-container .card h4{
+ font-weight: 600; 
+}
+
+.serv-container .card p{
+  padding: 0;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+
+.serv-container .card a{
+  font-weight: 500;
+  text-decoration: none;
+  color: #3498db;
+}
+
+
+/* footer */
+
+
+
+.redes p{
+  left: 50px;
+  
+}
+
+.links a img{
+  width: 30px;
+}
+
+
+@media (max-width: 480px){
+/*Servicios*/
+.title, .serv-container{
+  display: none;
+}
+
+
+
+
+/*garantias*/
+
+/*Garantias*/
+
+.title-garantia{
+  text-align: center;
+  font-size: 20px;
+  color: #6a6a6a;
+  margin-top: 200px;
+  margin-left: 70px;
+  font-weight: 100;
+}
+
+.garantia-container{
+  overflow: auto;
+  width: 200px;
+  margin-left: 160px;
+}
+
+.garantia-container .ico{
+  flex-direction: column;
+  justify-items: center;
+  width: 100px;
+  height: 200px;
+  border-radius: 20px;
+  margin: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+
+.garantia-container .ico img{
+  width: 90px;
+  height: 80px;
+}
+
+.garantia-container .ico h4{
+  font-weight: 600; 
+ }
+
+
+ .garantia-container .ico p{
+  padding: 0;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+/*Servicios responsive*/
+
+.nosotros-banner-title{
+  display: block;
+  color: #6a6a6a;
+  font-size: 20px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.nosotros-banner{
+  position: relative;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 500px;
+}
+
+#img {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 400px;
+  height: 250px;
+}
+
+
+
+.botones{
+    font-size: 20px;
+    width: 50px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    background-color: green;
+    opacity: 50%;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 0 10px #000033;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition:  all 0.3s ease;
+}
+.atras{
+  position: absolute;
+  top: 15%;
+  left: 10%;
+}
+
+.adelante{
+  position: absolute;
+  left: 80%;
+  top: 15%;
+ 
+}
+
+.botones:hover{
+    cursor: pointer;
+    transform: scale(1.2,1.2);
+
+}
+
+ 
+
+/* footer */
+
+
+.footer-container {
+  
+  grid-template-columns: repeat(1, 1fr);
+  
+}
+
+
+
+
+
+
+.redes{
+  justify-content: center;
+}
+
+.redes p{
+  display: none;
+}
+
+.links a img{
+  width: 30px;
+ 
+}
+
+
+}
