@@ -20,6 +20,7 @@
 
 
 
+
 /*barra de navegacion*/
 
 .navbar{
@@ -484,7 +485,6 @@
     margin-top: 20px;
     width: 100%;
     max-width: 1440px;
-    
     margin-left: auto;
     margin-right: auto;
 }
@@ -557,6 +557,139 @@
     background-color: var(--color-hover);
   }
 
+
+
+  /*section-trabajos*/
+
+  .tercera-section{
+    overflow: hidden;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .segundo-carrusel{
+    display: flex;
+    justify-content: start;
+    width: 200%;
+    max-width: 120em;
+   transition: all 0.4s ease;
+    border-radius: 1em;
+    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+    padding: 2em;
+    transition: all 0.5s ease;
+    transform: translateX(0%);
+  }
+
+.card{
+    overflow: hidden;
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+  }
+
+.card:hover{
+    cursor: pointer;
+    transform: translate(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+ .card img{
+    width: 330px;
+    height: 220px;
+  }
+  
+  
+ .card h4{
+   font-weight: 600; 
+  }
+  
+ .card p{
+    padding: 0;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  
+  
+ .card a{
+    
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
+  }
+
+  /*laptop*/
+
+ @media (max-width: 1024px){
+    .card{
+        height: 400px;
+      }
+
+      .puntos-card {
+        width: 100%;
+        margin: 1em 0 0;
+        padding: 0.4em;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .punto-card{
+        cursor: pointer;
+        width: 2em;
+        height: 2em;
+        margin: 1em 1em 0;
+        color: var(--negro);
+        transition: all 0.4s ease;
+        border-radius: 1em;
+        background-color: var(--color-primary);
+        box-shadow: 0.6em 0.6em 1.2em var(--sombra-ppal), -0.6em -0.6em 1.2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+      }
+      .punto-card.activo {
+        background-color: var(--color-hover);
+      }
+
+    .oculto{
+          display: none;
+      }
+
+ }
+
+/*mobile*/
+
+ @media(max-width: 450px){
+
+.card{
+    height: 330px;
+}
+
+.card p{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.card h2{
+    font-size: 15px;
+}
+
+
+
+ }
+
+ @media(max-width: 600px){
+.oculto{
+ display: block;
+}
+}
 
 
 
