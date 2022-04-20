@@ -34,6 +34,7 @@
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
+    z-index: 100;
 }
 
 .logo-nombre{
@@ -435,7 +436,7 @@
 
 /*mobile*/
 
-@media (max-width: 450px){
+@media (max-width: 600px){
    .primera-section{
        flex-direction: column;
 
