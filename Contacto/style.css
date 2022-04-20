@@ -2,13 +2,19 @@
 
 :root{
   /*colores principales*/
-  --color-backgroun-body: #00640033;
-  --colo-btn-nav: green;
-  --color-hover-a: #adff2f;
+  --color-primary: #008000;
+  --color-secundary: #7fff00; 
+  --color-hover: #66cdaa;
 
-  /*colores de textos*/
-  --color-texto-primario : #000;
-
+  /*colores*/
+  --color-rojo: #e83845;
+  --color-negro: #000;
+  --color-blanco: #fff;
+  --color-azul: #0000ff;
+  --color-amarillo: #ffff00;
+  --sombra-ppal: #c9c9c9;
+  --sombra-sec: #ffffff;
+}
   /*tamanos de fuentes*/
   --font-primary-body: 16px;
 
@@ -29,7 +35,7 @@ textarea {
   font-family: "Poppins", sans-serif;
 }
 .header {
-  background-color: #fff;
+  background-color: var(--color-blanco);
   height: 80px;
   width: 100%;
   top: 0;
@@ -45,7 +51,7 @@ textarea {
 }
 
 .nav-link {
-  color: #000;
+  color: var(--color-negro);
   text-decoration: none;
 }
 
@@ -53,15 +59,7 @@ textarea {
   width: 100px;
 }
 
-.nombre-logo{
-  position: absolute;
-  left: 240px;
-  top: 40px;
-  color: green;
-  font-size: 25px;
-  letter-spacing: 1px;
-  font-family: Brush Script MT;
-}
+
 
 .nav-menu {
   display: flex;
@@ -84,13 +82,13 @@ textarea {
 
 .nav-menu-link:hover,
 .nav-menu-link_active {
-  background-color: var(--color-hover-a);
+  background-color: var(--color-hover);
   transition: 0.5s;
 }
 
 /* TOGGLE */
 .nav-toggle {
-  color: white;
+  color: var(--color-blanco);
   background: none;
   border: none;
   font-size: 30px;
@@ -113,7 +111,7 @@ hr {
   width: 100%;
   min-height: 100vh;
   padding: 2rem;
-  background-color: #fafafa;
+  background-color: var(--sombra-ppal);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -123,7 +121,7 @@ hr {
 .form {
   width: 100%;
   max-width: 820px;
-  background-color: #fff;
+  background-color: var(--color-blanco);
   border-radius: 10px;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -133,7 +131,7 @@ hr {
 }
 
 .contact-form {
-  background-color: #1abc9c;
+  background-color: var(--color-primary);
   position: relative;
 }
 
@@ -162,7 +160,7 @@ hr {
   position: absolute;
   width: 26px;
   height: 26px;
-  background-color: #1abc9c;
+  background-color: var(--color-primary);
   transform: rotate(45deg);
   top: 50px;
   left: -13px;
@@ -176,7 +174,7 @@ form {
 }
 
 .title {
-  color: #fff;
+  color: var(--color-blanco);
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 1;
@@ -191,10 +189,10 @@ form {
 .input {
   width: 100%;
   outline: none;
-  border: 2px solid #fafafa;
+  border: 2px solid var(--sombra-ppal);
   background: none;
   padding: 0.6rem 1.2rem;
-  color: #fff;
+  color: var(--color-blanco);
   font-weight: 500;
   font-size: 0.95rem;
   letter-spacing: 0.5px;
@@ -216,7 +214,7 @@ textarea.input {
   left: 15px;
   transform: translateY(-50%);
   padding: 0 0.4rem;
-  color: #fafafa;
+  color: var(--sombra-ppal);
   font-size: 0.9rem;
   font-weight: 400;
   pointer-events: none;
@@ -231,10 +229,10 @@ textarea.input {
 
 .btn {
   padding: 0.6rem 1.3rem;
-  background-color: #fff;
-  border: 2px solid #fafafa;
+  background-color: var(--color-blanco);
+  border: 2px solid var(--sombra-ppal);
   font-size: 0.95rem;
-  color: #1abc9c;
+  color: var(--color-primary);
   line-height: 1;
   border-radius: 25px;
   outline: none;
@@ -244,8 +242,8 @@ textarea.input {
 }
 
 .btn:hover {
-  background-color: transparent;
-  color: #fff;
+  background-color: var(--color-hover);
+  
 }
 
 .input-container span {
@@ -268,7 +266,7 @@ textarea.input {
   opacity: 0;
   transition: 0.3s;
   height: 5px;
-  background-color: #1abc9c;
+  background-color: var(--color-primary);
   top: 50%;
   transform: translateY(-50%);
 }
@@ -300,17 +298,17 @@ textarea.input {
 }
 
 .contact-info .title {
-  color: #1abc9c;
+  color: var(--color-primary);
 }
 
 .text {
-  color: #333;
+  color: var(--color-primary);
   margin: 1.5rem 0 2rem 0;
 }
 
 .information {
   display: flex;
-  color: #555;
+  color: var(--color-primary);
   margin: 0.7rem 0;
   align-items: center;
   font-size: 0.95rem;
@@ -326,7 +324,7 @@ textarea.input {
 }
 
 .social-media p {
-  color: #333;
+  color: var(--color-primary);
 }
 
 .social-icons {
@@ -339,7 +337,7 @@ textarea.input {
   height: 35px;
   border-radius: 5px;
   background: linear-gradient(45deg, #1abc9c, #149279);
-  color: #fff;
+  color: var(--color-primary);
   text-align: center;
   line-height: 35px;
   margin-right: 0.5rem;
@@ -355,7 +353,7 @@ textarea.input {
   position: absolute;
   width: 110px;
   height: 100px;
-  border: 22px solid #1abc9c;
+  border: 22px solid var(--color-primary);
   border-radius: 50%;
   bottom: -77px;
   right: 50px;
@@ -378,7 +376,7 @@ textarea.input {
   position: absolute;
   width: 360px;
   height: 360px;
-  background-color: #fafafa;
+  background-color: var(--sombra-ppal);
   border-radius: 50%;
   top: calc(50% - 180px);
   left: calc(50% - 180px);
@@ -416,7 +414,7 @@ textarea.input {
     flex-direction: column;
     align-items: center;
     margin: 0;
-    background-color: #149279;
+    background-color: var(--color-primary);
     position: fixed;
     top: 60px;
     width: 100%;
@@ -426,7 +424,7 @@ textarea.input {
     transition: left 0.3s;
   }
   .nav-link{
-    color: black;
+    color: var(--color-negro);
   }
 
   .nav-menu-item {
