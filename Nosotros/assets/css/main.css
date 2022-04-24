@@ -1,8 +1,8 @@
 :root{
     /*colores principales*/
-    --color-primary: #008000;
-    --color-secundary: #7fff00; 
-    --color-hover: #66cdaa;
+    --color-primary: #56ab2f;
+    --color-secundary: #a8e063; 
+    --color-hover: #66ff00;
 
     /*colores*/
     --color-rojo: #e83845;
@@ -10,9 +10,11 @@
     --color-blanco: #fff;
     --color-azul: #0000ff;
     --color-amarillo: #ffff00;
-    --sombra-ppal: #c9c9c9;
-    --sombra-sec: #ffffff;
+    --color-green: green;
+    --sombra-ppal: #56ab2f;
+    --sombra-sec:  #a8e063;
 }
+
 
 
 
@@ -97,13 +99,11 @@ input, select, textarea {
 
 
 
-
-
 /*barra de navegacion*/
 
 .navbar{
     width: 100%;
-    background-color: var(--color-primary);
+    background-color: var(--color-secundary);
     height: 70px;
     position: fixed;
     display: flex;
@@ -111,6 +111,15 @@ input, select, textarea {
     margin-left: auto;
     margin-right: auto;
     z-index: 100;
+}
+
+.navbar .menu{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	max-width: 1440px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .logo-nombre{
@@ -380,8 +389,10 @@ input, select, textarea {
 	}
 
 	body {
-		background: var(--color-blanco);
-		overflow-x: hidden;
+			background: var(--color-primary);  /* fallback for old browsers */
+			background: -webkit-linear-gradient(to right, var(--color-secundary), var(--color-primary));  /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to right, var(--color-secundary), var(--color-primary)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		    overflow-x: hidden;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {

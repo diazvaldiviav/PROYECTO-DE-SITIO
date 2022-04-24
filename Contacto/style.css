@@ -2,9 +2,9 @@
 
 :root{
   /*colores principales*/
-  --color-primary: #008000;
-  --color-secundary: #7fff00; 
-  --color-hover: #66cdaa;
+  --color-primary: #56ab2f;
+  --color-secundary: #a8e063; 
+  --color-hover: #66ff00;
 
   /*colores*/
   --color-rojo: #e83845;
@@ -32,16 +32,14 @@
 body,
 input,
 textarea {
-  font-family: "Poppins", sans-serif;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;;
 }
-
-
 
 /*barra de navegacion*/
 
 .navbar{
     width: 100%;
-    background-color: var(--color-primary);
+    background-color: var(--color-secundary);
     height: 70px;
     position: fixed;
     display: flex;
@@ -49,6 +47,16 @@ textarea {
     margin-left: auto;
     margin-right: auto;
     z-index: 3000;
+}
+
+.navbar .menu{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .logo-nombre{
@@ -300,7 +308,9 @@ textarea {
 
 .form {
   width: 100%;
-  max-width: 820px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: var(--color-blanco);
   border-radius: 10px;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
@@ -313,6 +323,7 @@ textarea {
 .contact-form {
   background-color: var(--color-primary);
   position: relative;
+  
 }
 
 .circle {
