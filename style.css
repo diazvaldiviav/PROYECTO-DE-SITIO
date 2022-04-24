@@ -10,7 +10,7 @@
     --color-blanco: #fff;
     --color-azul: #0000ff;
     --color-amarillo: #ffff00;
-    --sombra-ppal: #c9c9c9;
+    --sombra-ppal: #b3b3b3;
     --sombra-sec: #ffffff;
 }
 
@@ -19,6 +19,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
 
 
 
@@ -406,10 +408,19 @@
 }
 
 .section-right img{
+  border-radius: 39px;
+   transition: all 0.50s;
     width: 400px;
-    height: 200px;
+    height: 350px;
     margin-left: 100px;
     margin-right: 60px;
+    box-shadow:  20px -20px 40px var(--sombra-ppal),
+             -20px 20px 40px var(--sombra-sec);
+}
+
+.section-right img:hover{
+  transform: translateX(10px);
+  transition: all 0.5s ease;
 }
 
 
@@ -498,24 +509,28 @@
     max-width: 120em;
     transition: all 0.4s ease;
     border-radius: 1em;
-    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
     padding: 2em;
     transition: all 0.5s ease;
     transform: translateX(0%);
+    margin-bottom: 5px;
     
 }
 
 
 .garantia-container .ico{
-   margin: 20px;
-   width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  width: 20%;
 }
 
 .garantia-container .ico img{
     width: 100px;
     transition: all 0.4s ease;
     border-radius: 1em;
-    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+    
     
 }
 
@@ -548,7 +563,8 @@
     cursor: pointer;
     width: 2em;
     height: 2em;
-    margin: 1em 1em 0;
+    margin: 10px;
+    margin-top: 5px;
     color: var(--negro);
     transition: all 0.4s ease;
     border-radius: 1em;
@@ -559,6 +575,156 @@
     background-color: var(--color-hover);
   }
 
+  .visible{
+    display: none;
+  }
+  @media(max-width: 1024px){
+    .visible{
+      display: block;
+    }
+  }
+  /*mobile*/
+ @media(max-width: 650px){
+  .garantia-container .ico img{
+    width: 80px;
+  
+}
+
+.garantia-container .carrusel{
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+
+   
+}
+
+/*componentes*/
+/*primera seccion*/
+.component{
+  margin-top: 50px;
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.primero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.primero div{
+  margin: 50px;
+}
+
+.info-component{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+}
+
+.info-component h2{
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 35px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.info-component h3{
+text-align: center;
+font-size:  25px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.info-component p{
+  margin-left: 15px;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+.info-component ul{
+  margin: 10px;
+}
+
+.img-info{
+  width: 50%;
+}
+
+.img-info img{
+  transition: all 0.50s;
+  width: 450px;
+  height: 400px;
+  border-radius: 39px;
+  box-shadow:  20px -20px 40px var(--sombra-ppal),
+             -20px 20px 40px var(--sombra-sec);
+}
+
+.img-info img:hover{
+  transform: translateX(10px);
+  transition: all 0.5s ease;
+}
+
+/*componentes responsive*/
+
+/*tablet*/
+@media(max-width: 850px){
+
+  .img-info img{
+    transition: all 0.50s;
+    width: 280px;
+    height: 350px;
+    border-radius: 39px;
+    box-shadow:  20px -20px 40px var(--sombra-ppal),
+               -20px 20px 40px var(--sombra-sec);
+  }
+
+  /*mobile*/
+  @media(max-width: 500px){
+    .primero{
+      flex-direction: column;
+    }
+    
+    .primero div{
+      margin: 10px;
+    }
+    
+    .info-component{
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    .info-component h2{
+      margin-bottom: 5px;
+      font-size: 25px;   
+    }
+    .info-component h3{
+    font-size:  20px;
+    }
+    .info-component p{
+      margin-left: 15px;
+      margin-right: 15px;
+      text-align: justify;
+      margin-bottom: 5px;
+    }
+    
+    .info-component ul{
+      margin: 5px;
+    }
+    
+    .img-info{
+      width: 100%;
+    }
+    
+    .img-info img{
+      width: 100%;
+      height: 300px;
+    }
+
+  }
+  
+}
 
 
   /*section-trabajos*/
@@ -579,7 +745,6 @@
     max-width: 120em;
    transition: all 0.4s ease;
     border-radius: 1em;
-    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
     padding: 2em;
     transition: all 0.5s ease;
     transform: translateX(0%);
@@ -598,9 +763,9 @@
     width: 330px;
     height: 430px;
     border-radius: 8px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px var(--sombra-ppal);
     overflow: hidden;
-    margin: 20px;
+    margin-left: 20px;
     text-align: center;
     transition: all 0.25s;
   }
@@ -608,7 +773,7 @@
 .card:hover{
     cursor: pointer;
     transform: translate(-15px);
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 16px var(--sombra-ppal);
   }
   
  .card img{
@@ -639,40 +804,52 @@
   /*laptop*/
 
  @media (max-width: 1024px){
+
     .card{
         height: 400px;
+        width: 300px;
+        margin-left: 25px;
       }
+    
 
-      .puntos-card {
-        width: 100%;
-        margin: 1em 0 0;
-        padding: 0.4em;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-      }
       
-      .punto-card{
-        cursor: pointer;
-        width: 2em;
-        height: 2em;
-        margin: 1em 1em 0;
-        color: var(--negro);
-        transition: all 0.4s ease;
-        border-radius: 1em;
-        background-color: var(--color-primary);
-        box-shadow: 0.6em 0.6em 1.2em var(--sombra-ppal), -0.6em -0.6em 1.2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
-      }
-      .punto-card.activo {
-        background-color: var(--color-hover);
-      }
 
-    .oculto{
-          display: none;
-      }
 
  }
+
+ /*tablet*/
+
+ @media(max-width: 780px){
+  
+
+  .card{
+    height: 300px;
+    width: 200px;
+    margin-left: 20px;
+  }
+
+  .card h4{
+    font-weight: 300; 
+   }
+   
+  .card p{
+     padding: 0;
+     font-size: 10px;
+     font-weight: 250;
+     margin-bottom: 10px;
+   }
+   
+   
+  .card a{
+     
+     font-weight: 200;
+     text-decoration: none;
+     color: #3498db;
+   }
+
+
+ }
+
 
 /*mobile*/
 
@@ -693,9 +870,36 @@
 
 
 
+
+
  }
 
  @media(max-width: 600px){
+
+  .puntos-card{
+    width: 100%;
+    margin: 1em 0 0;
+    padding: 0.4em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+ .punto-card {
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+    margin: 1em 1em 0;
+    color: var(--negro);
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: var(--color-primary);
+    box-shadow: 0.6em 0.6em 1.2em var(--sombra-ppal), -0.6em -0.6em 1.2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  }
+ .punto-card.activo {
+    background-color: var(--color-hover);
+  }
 .oculto{
  display: block;
 }
@@ -789,6 +993,9 @@
      flex-direction: column;
     }
   }
+
+
+
 
 
 
