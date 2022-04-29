@@ -95,7 +95,7 @@ textarea {
     }
 
     .navbar .nav-menu li a{
-        color: var(--color-negro);
+        color: var(--color-blanco);
         text-decoration: none;
         margin: auto;
         padding: 5px;
@@ -231,9 +231,6 @@ textarea {
     transition: left 0.3s;
   }
 
-  .navbar .nav-menu li a{
-      color: var(--color-negro);
-  }
 
 
   .navbar .nav-menu li a:hover{
@@ -280,7 +277,6 @@ textarea {
     
         .navbar .nav-menu li a{
             font-size: 12px;
-            color: var(--color-negro);
             text-decoration: none;
             margin: auto;
             padding: 5px;
