@@ -655,6 +655,7 @@ animation: scaling 3s ease infinite;
     margin-right: auto;
 }
 .garantia-container .carrusel{
+  
     display: flex;
     justify-content: center;
     width: 200%;
@@ -737,6 +738,16 @@ animation: scaling 3s ease infinite;
   }
   /*mobile*/
  @media(max-width: 650px){
+  .garantia-container{
+    overflow-X: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+  }
+
+  .garantia-container .ico{
+    scroll-snap-align: center;
+  }
+
   .garantia-container .ico img{
     width: 80px;
   
@@ -1066,18 +1077,19 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         margin-left: 25px;
       }
     
-
-      
-
-
  }
 
  /*tablet*/
 
  @media(max-width: 780px){
-  
+  .tercera-section{
+    overflow-X: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+  }
 
   .card{
+    scroll-snap-align: center;
     height: 300px;
     width: 200px;
     margin-left: 20px;
